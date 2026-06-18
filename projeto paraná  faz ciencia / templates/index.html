@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Paraná Faz Ciência | UEM</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+</head>
+<body>
+
+    <div class="loader-wrapper">
+        <div class="loader">
+            <i class="fas fa-leaf fa-spin"></i>
+        </div>
+    </div>
+
+    <nav id="navbar">
+        <div class="logo">PFC UEM</div>
+        <ul class="nav-links">
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#compostagem">Compostagem</a></li>
+            <li><a href="#automacao">Automação</a></li>
+            <li><a href="#equipe">Equipe</a></li>
+            <li><a href="/login" class="btn-login">Login Restrito</a></li>
+        </ul>
+    </nav>
+
+    <header class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="gsap-title">Tecnologia e Sustentabilidade</h1>
+            <p class="gsap-subtitle">Compostagem Inteligente e Automação com IoT para um futuro mais verde.</p>
+            <a href="#sobre" class="btn-primary gsap-btn">Conheça o Projeto</a>
+        </div>
+    </header>
+
+    <section id="sobre" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2>Universidade Estadual de Maringá</h2>
+            <div class="split-content">
+                <img src="https://via.placeholder.com/600x400" alt="Paraná Faz Ciência" class="rounded-img">
+                <div class="text-content">
+                    <h3>Projeto Paraná Faz Ciência</h3>
+                    <p>Iniciativa focada na união entre educação ambiental e tecnologia avançada. Transformamos o manejo de resíduos orgânicos e a manutenção de hortas em processos baseados em dados precisos e internet das coisas.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="pilares" class="section bg-light">
+        <div class="container">
+            <h2 data-aos="fade-up">Nossos Pilares</h2>
+            <div class="cards-grid">
+                <div class="card" data-aos="zoom-in" data-aos-delay="100">
+                    <i class="fas fa-recycle icon-green"></i>
+                    <h3>Compostagem</h3>
+                    <p>Monitoramento e registro do peso e tipo de resíduos orgânicos processados.</p>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="200">
+                    <i class="fas fa-microchip icon-green"></i>
+                    <h3>Automação ESP32</h3>
+                    <p>Controle de umidade, temperatura e irrigação inteligente em tempo real.</p>
+                </div>
+                <div class="card" data-aos="zoom-in" data-aos-delay="300">
+                    <i class="fas fa-chart-line icon-green"></i>
+                    <h3>Análise de Dados</h3>
+                    <p>Exportação para Excel e painéis gráficos para tomada de decisão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="equipe" class="section">
+        <div class="container" data-aos="fade-up">
+            <h2>Equipe do Projeto</h2>
+            <div class="team-grid">
+                <div class="team-member"><img src="https://via.placeholder.com/150" alt="Foto"><h4>Prof. Calegari</h4><p>Coordenador</p></div>
+                <div class="team-member"><img src="https://via.placeholder.com/150" alt="Foto"><h4>Enzo</h4><p>Desenvolvedor Backend</p></div>
+                <div class="team-member"><img src="https://via.placeholder.com/150" alt="Foto"><h4>Rafael</h4><p>Engenharia IoT</p></div>
+                <div class="team-member"><img src="https://via.placeholder.com/150" alt="Foto"><h4>José</h4><p>Análise de Dados</p></div>
+                <div class="team-member"><img src="https://via.placeholder.com/150" alt="Foto"><h4>Eudes</h4><p>Pesquisador Ambiental</p></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+</body>
+</html>
