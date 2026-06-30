@@ -1,93 +1,345 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Paraná Faz Ciência | UEM</title>
-    
+
+    <title>Paraná Faz Ciência</title>
+
     <link rel="stylesheet" href="style.css">
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <script src="https://kit.fontawesome.com/4d8d8c4d4a.js" crossorigin="anonymous"></script>
+
 </head>
+
 <body>
 
-    <div class="loader-wrapper">
-        <div class="loader">
-            <i class="fas fa-leaf fa-spin"></i>
-        </div>
-    </div>
+<header>
 
-    <nav id="navbar">
-        <div class="logo">PFC UEM</div>
-        <ul class="nav-links">
-            <li><a href="#sobre">Sobre</a></li>
-            <li><a href="#compostagem">Compostagem</a></li>
-            <li><a href="#automacao">Automação</a></li>
-            <li><a href="#equipe">Equipe</a></li>
-            <li><a href="/login" class="btn-login">Login Restrito</a></li>
-        </ul>
-    </nav>
+<div class="logo">
 
-    <header class="hero" id="home">
-        <div class="hero-content">
-            <h1 class="gsap-title">Tecnologia e Sustentabilidade</h1>
-            <p class="gsap-subtitle">Compostagem Inteligente e Automação com IoT para um futuro mais verde.</p>
-            <a href="#sobre" class="btn-primary gsap-btn">Conheça o Projeto</a>
-        </div>
-    </header>
+<h2>Paraná Faz Ciência</h2>
 
-    <section id="sobre" class="section">
-        <div class="container" data-aos="fade-up">
-            <h2>Universidade Estadual de Maringá</h2>
-            <div class="split-content">
-                <img src="https://via.placeholder.com/600x400" alt="Paraná Faz Ciência" class="rounded-img">
-                <div class="text-content">
-                    <h3>Projeto Paraná Faz Ciência</h3>
-                    <p>Iniciativa focada na união entre educação ambiental e tecnologia avançada. Transformamos o manejo de resíduos orgânicos e a manutenção de hortas em processos baseados em dados precisos e internet das coisas.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+</div>
 
-    <section id="pilares" class="section bg-light">
-        <div class="container">
-            <h2 data-aos="fade-up">Nossos Pilares</h2>
-            <div class="cards-grid">
-                <div class="card" data-aos="zoom-in" data-aos-delay="100">
-                    <i class="fas fa-recycle icon-green"></i>
-                    <h3>Compostagem</h3>
-                    <p>Monitoramento e registro do peso e tipo de resíduos orgânicos processados.</p>
-                </div>
-                <div class="card" data-aos="zoom-in" data-aos-delay="200">
-                    <i class="fas fa-microchip icon-green"></i>
-                    <h3>Automação ESP32</h3>
-                    <p>Controle de umidade, temperatura e irrigação inteligente em tempo real.</p>
-                </div>
-                <div class="card" data-aos="zoom-in" data-aos-delay="300">
-                    <i class="fas fa-chart-line icon-green"></i>
-                    <h3>Análise de Dados</h3>
-                    <p>Exportação para Excel e painéis gráficos para tomada de decisão.</p>
-                </div>
-            </div>
-        </div>
-    </section>
+<nav>
 
-    <section id="equipe" class="section">
-        <div class="container" data-aos="fade-up">
-            <h2>Equipe do Projeto</h2>
-            <div class="team-grid">
-                <div class="team-member"><img src="https://via.placeholder.com/150" alt="Foto"><h4>Prof. Calegari</h4><p>Coordenador</p></div>
-                <div class="team-member"><img src="https://via.placeholder.com/150" alt="Foto"><h4>Enzo</h4><p>Desenvolvedor Backend</p></div>
-                <div class="team-member"><img src="https://via.placeholder.com/150" alt="Foto"><h4>Rafael</h4><p>Engenharia IoT</p></div>
-                <div class="team-member"><img src="https://via.placeholder.com/150" alt="Foto"><h4>José</h4><p>Análise de Dados</p></div>
-                <div class="team-member"><img src="https://via.placeholder.com/150" alt="Foto"><h4>Eudes</h4><p>Pesquisador Ambiental</p></div>
-            </div>
-        </div>
-    </section>
+<ul>
 
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
-    <script src="{{ url_for('static', filename='js/main.js') }}"></script>
+<li><a href="#">Início</a></li>
+
+<li><a href="projeto.html">Projeto</a></li>
+
+<li><a href="galeria.html">Galeria</a></li>
+
+<li><a href="artigos.html">Artigos</a></li>
+
+<li><a href="compostagem.html">Compostagem</a></li>
+
+<li><a href="login.html" class="login-btn">Login</a></li>
+
+</ul>
+
+</nav>
+
+</header>
+
+<section class="hero">
+
+<div class="overlay"></div>
+
+<div class="hero-content">
+
+<h1>PARANÁ FAZ CIÊNCIA</h1>
+
+<p>
+Educação Ambiental • Compostagem Inteligente • Automação da Horta com ESP32
+</p>
+
+<a href="projeto.html" class="btn">
+Conheça o Projeto
+</a>
+
+</div>
+
+</section>
+
+<section class="sobre">
+
+<h2>Sobre o Projeto</h2>
+
+<p>
+
+O Paraná Faz Ciência é um projeto desenvolvido em parceria com a Universidade Estadual de Maringá (UEM), promovendo sustentabilidade através da compostagem inteligente e automação da horta utilizando sensores IoT e ESP32.
+
+</p>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+
+<i class="fas fa-seedling"></i>
+
+<h3>Compostagem</h3>
+
+<p>
+
+Transformação de resíduos orgânicos em adubo de alta qualidade.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-microchip"></i>
+
+<h3>ESP32</h3>
+
+<p>
+
+Controle automático utilizando sensores inteligentes.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-leaf"></i>
+
+<h3>Sustentabilidade</h3>
+
+<p>
+
+Redução do desperdício e incentivo à agricultura sustentável.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<i class="fas fa-graduation-cap"></i>
+
+<h3>Pesquisa</h3>
+
+<p>
+
+Projeto voltado para educação, inovação e pesquisa científica.
+
+</p>
+
+</div>
+
+</section>
+
+<section class="estatisticas">
+
+<h2>Números do Projeto</h2>
+
+<div class="stats">
+
+<div>
+
+<h1>250+</h1>
+
+<p>Kg Compostados</p>
+
+</div>
+
+<div>
+
+<h1>18</h1>
+
+<p>Sensores IoT</p>
+
+</div>
+
+<div>
+
+<h1>40+</h1>
+
+<p>Alunos Envolvidos</p>
+
+</div>
+
+<div>
+
+<h1>5</h1>
+
+<p>Pesquisadores</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="galeria">
+
+<h2>Galeria</h2>
+
+<div class="fotos">
+
+<div class="foto">
+<img src="img/foto1.jpg" alt="">
+</div>
+
+<div class="foto">
+<img src="img/foto2.jpg" alt="">
+</div>
+
+<div class="foto">
+<img src="img/foto3.jpg" alt="">
+</div>
+
+<div class="foto">
+<img src="img/foto4.jpg" alt="">
+</div>
+
+</div>
+
+</section>
+
+<section class="artigos">
+
+<h2>Artigos Científicos</h2>
+
+<div class="artigo">
+
+<h3>Compostagem Inteligente</h3>
+
+<p>
+
+Conheça os resultados da pesquisa desenvolvida pela equipe.
+
+</p>
+
+<a href="#">
+Baixar PDF
+</a>
+
+</div>
+
+<div class="artigo">
+
+<h3>Automação com ESP32</h3>
+
+<p>
+
+Sensores aplicados ao monitoramento da horta.
+
+</p>
+
+<a href="#">
+Baixar PDF
+</a>
+
+</div>
+
+</section>
+
+<section class="noticias">
+
+<h2>Últimas Notícias</h2>
+
+<div class="news-container">
+
+<div class="news">
+
+<h3>Nova etapa do projeto</h3>
+
+<p>
+
+A equipe iniciou novos testes utilizando sensores de umidade.
+
+</p>
+
+</div>
+
+<div class="news">
+
+<h3>Parceria com a UEM</h3>
+
+<p>
+
+Pesquisadores acompanham o desenvolvimento do sistema.
+
+</p>
+
+</div>
+
+<div class="news">
+
+<h3>Horta Automatizada</h3>
+
+<p>
+
+O sistema de irrigação inteligente está em fase final.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section class="contato">
+
+<h2>Contato</h2>
+
+<form>
+
+<input type="text" placeholder="Nome">
+
+<input type="email" placeholder="E-mail">
+
+<textarea placeholder="Mensagem"></textarea>
+
+<button>
+
+Enviar
+
+</button>
+
+</form>
+
+</section>
+
+<footer>
+
+<h3>Paraná Faz Ciência</h3>
+
+<p>
+
+Universidade Estadual de Maringá - UEM
+
+</p>
+
+<p>
+
+Projeto de Educação Ambiental, Compostagem Inteligente e Automação da Horta.
+
+</p>
+
+<p>
+
+© 2026 Todos os direitos reservados.
+
+</p>
+
+</footer>
+
+<script src="main.js"></script>
+
 </body>
+
 </html>

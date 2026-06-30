@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compostagem | Paraná Faz Ciência</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        <h2>Paraná Faz Ciência</h2>
+    </div>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Início</a></li>
+            <li><a href="projeto.html">Projeto</a></li>
+            <li><a href="galeria.html">Galeria</a></li>
+            <li><a href="artigos.html">Artigos</a></li>
+            <li><a href="compostagem.html" class="ativo">Compostagem</a></li>
+            <li><a href="login.html">Login</a></li>
+        </ul>
+    </nav>
+
+</header>
+
+<section class="banner-pagina">
+
+    <h1>Monitoramento da Compostagem</h1>
+
+    <p>
+        Acompanhamento em tempo real dos dados do processo de compostagem.
+    </p>
+
+</section>
+
+<section class="container">
+
+    <h2>Resumo Geral</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>🌡 Temperatura</h3>
+            <h1>34°C</h1>
+            <p>Temperatura atual da composteira.</p>
+        </div>
+
+        <div class="card">
+            <h3>💧 Umidade</h3>
+            <h1>68%</h1>
+            <p>Umidade medida pelos sensores.</p>
+        </div>
+
+        <div class="card">
+            <h3>⚖ Peso</h3>
+            <h1>215 kg</h1>
+            <p>Total de resíduos processados.</p>
+        </div>
+
+        <div class="card">
+            <h3>♻ Adubo Produzido</h3>
+            <h1>92 kg</h1>
+            <p>Composto orgânico gerado.</p>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container">
+
+    <h2>Histórico de Medições</h2>
+
+    <table class="tabela">
+
+        <thead>
+
+            <tr>
+                <th>Data</th>
+                <th>Temperatura</th>
+                <th>Umidade</th>
+                <th>Peso</th>
+                <th>Observação</th>
+            </tr>
+
+        </thead>
+
+        <tbody>
+
+            <tr>
+                <td>01/06/2026</td>
+                <td>31°C</td>
+                <td>64%</td>
+                <td>198 kg</td>
+                <td>Processo normal</td>
+            </tr>
+
+            <tr>
+                <td>08/06/2026</td>
+                <td>33°C</td>
+                <td>66%</td>
+                <td>205 kg</td>
+                <td>Boa decomposição</td>
+            </tr>
+
+            <tr>
+                <td>15/06/2026</td>
+                <td>34°C</td>
+                <td>68%</td>
+                <td>215 kg</td>
+                <td>Excelente desempenho</td>
+            </tr>
+
+        </tbody>
+
+    </table>
+
+</section>
+
+<section class="container">
+
+    <h2>Gráficos</h2>
+
+    <div class="cards">
+
+        <div class="card">
+            <h3>Temperatura</h3>
+            <canvas id="graficoTemperatura"></canvas>
+        </div>
+
+        <div class="card">
+            <h3>Umidade</h3>
+            <canvas id="graficoUmidade"></canvas>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="container">
+
+    <h2>Informações da Compostagem</h2>
+
+    <p>
+
+        O monitoramento é realizado utilizando sensores conectados ao ESP32, permitindo acompanhar a temperatura, umidade e evolução da compostagem. Essas informações auxiliam a equipe na tomada de decisões e garantem maior eficiência no processo.
+
+    </p>
+
+</section>
+
+<footer>
+
+    <h3>Paraná Faz Ciência</h3>
+
+    <p>Universidade Estadual de Maringá - UEM</p>
+
+    <p>Projeto de Educação Ambiental, Compostagem Inteligente e Automação da Horta.</p>
+
+    <p>© 2026 Todos os direitos reservados.</p>
+
+</footer>
+
+<script src="main.js"></script>
+
+</body>
+
+</html>

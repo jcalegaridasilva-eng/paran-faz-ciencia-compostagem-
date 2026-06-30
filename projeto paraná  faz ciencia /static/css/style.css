@@ -1,96 +1,2208 @@
-:root {
-    --verde-escuro: #2E7D32;
-    --verde-claro: #81C784;
-    --branco: #FFFFFF;
-    --terra: #8D6E63;
-    --terra-claro: #D7CCC8;
-    --amarelo-suave: #FFF59D;
-    --fonte-principal: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/*========================================
+        PARANÁ FAZ CIÊNCIA
+        STYLE.CSS
+=========================================*/
+
+/*======================
+RESET
+=======================*/
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: var(--fonte-principal);
+:root{
+
+    --verde:#2E7D32;
+    --verde-claro:#4CAF50;
+    --verde-escuro:#1B5E20;
+
+    --branco:#ffffff;
+    --cinza:#f5f5f5;
+    --cinza2:#e8e8e8;
+    --texto:#333333;
+
+    --azul:#1565C0;
+
+    --sombra:0px 10px 25px rgba(0,0,0,.12);
+
+    --radius:12px;
+
 }
 
-body {
-    background-color: #FAFAFA;
-    color: #333;
-    overflow-x: hidden;
+body{
+
+    font-family:'Poppins',sans-serif;
+    background:var(--cinza);
+    color:var(--texto);
+    overflow-x:hidden;
+
 }
 
-/* Loading Screen */
-.loader-wrapper {
-    position: fixed;
-    top: 0; left: 0; width: 100%; height: 100%;
-    background: var(--verde-escuro);
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 9999;
-    color: var(--amarelo-suave);
-    font-size: 3rem;
-    transition: opacity 0.5s ease;
+/*======================
+SCROLLBAR
+=======================*/
+
+::-webkit-scrollbar{
+
+    width:10px;
+
 }
 
-/* Navbar */
-#navbar {
-    position: fixed;
-    top: 0; width: 100%;
-    background: rgba(255, 255, 255, 0.95);
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
-    z-index: 1000;
-    transition: all 0.3s ease;
+::-webkit-scrollbar-track{
+
+    background:#ddd;
+
 }
-.logo { font-size: 1.5rem; font-weight: bold; color: var(--verde-escuro); }
-.nav-links { display: flex; list-style: none; gap: 20px; align-items: center; }
-.nav-links a { text-decoration: none; color: var(--terra); font-weight: 500; transition: color 0.3s; }
-.nav-links a:hover { color: var(--verde-escuro); }
-.btn-login { background: var(--verde-escuro); color: var(--branco)!important; padding: 8px 20px; border-radius: 20px; }
 
-/* Hero Section com Imagem Genérica de Fundo */
-.hero {
-    height: 100vh;
-    background: linear-gradient(rgba(46, 125, 50, 0.8), rgba(46, 125, 50, 0.6)), url('https://via.placeholder.com/1920x1080') center/cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    color: var(--branco);
+::-webkit-scrollbar-thumb{
+
+    background:var(--verde);
+
+    border-radius:20px;
+
 }
-.hero h1 { font-size: 4rem; margin-bottom: 10px; color: var(--amarelo-suave); }
-.hero p { font-size: 1.2rem; margin-bottom: 30px; }
-.btn-primary { background: var(--amarelo-suave); color: var(--verde-escuro); padding: 12px 30px; text-decoration: none; font-weight: bold; border-radius: 25px; transition: transform 0.3s; }
-.btn-primary:hover { transform: scale(1.05); }
 
-/* Layouts Genéricos */
-.section { padding: 80px 20px; }
-.container { max-width: 1200px; margin: auto; text-align: center; }
-.bg-light { background: var(--terra-claro); }
+::-webkit-scrollbar-thumb:hover{
 
-.split-content { display: flex; gap: 40px; align-items: center; text-align: left; margin-top: 40px; }
-.rounded-img { width: 50%; border-radius: 15px; box-shadow: 0 10px 30px rgba(0,0,0,0.1); }
+    background:var(--verde-escuro);
 
-/* Cards Hover Effects */
-.cards-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 40px; }
-.card {
-    background: var(--branco);
-    padding: 40px 20px;
-    border-radius: 15px;
-    box-shadow: 0 5px 15px rgba(0,0,0,0.05);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
-    border-bottom: 4px solid var(--verde-claro);
 }
-.card:hover { transform: translateY(-10px); box-shadow: 0 15px 30px rgba(0,0,0,0.15); }
-.icon-green { font-size: 3rem; color: var(--verde-escuro); margin-bottom: 20px; }
 
-/* Equipe */
-.team-grid { display: flex; justify-content: center; gap: 30px; flex-wrap: wrap; margin-top: 40px; }
-.team-member img { border-radius: 50%; width: 150px; height: 150px; object-fit: cover; border: 4px solid var(--verde-claro); margin-bottom: 15px; transition: transform 0.3s; }
-.team-member:hover img { transform: scale(1.1); }
+/*======================
+LINKS
+=======================*/
+
+a{
+
+    text-decoration:none;
+
+    color:inherit;
+
+}
+
+ul{
+
+    list-style:none;
+
+}
+
+/*======================
+HEADER
+=======================*/
+
+header{
+
+    width:100%;
+
+    height:80px;
+
+    background:white;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:0 8%;
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    z-index:999;
+
+    box-shadow:var(--sombra);
+
+}
+
+.logo h2{
+
+    color:var(--verde);
+
+    font-size:30px;
+
+    font-weight:700;
+
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:30px;
+
+}
+
+nav ul li{
+
+    position:relative;
+
+}
+
+nav ul li a{
+
+    color:#333;
+
+    font-weight:500;
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:var(--verde);
+
+}
+
+nav ul li a::after{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    bottom:-6px;
+
+    width:0;
+
+    height:3px;
+
+    background:var(--verde);
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover::after{
+
+    width:100%;
+
+}
+
+.login-btn{
+
+    background:var(--verde);
+
+    color:white;
+
+    padding:10px 22px;
+
+    border-radius:50px;
+
+}
+
+.login-btn:hover{
+
+    background:var(--verde-escuro);
+
+    color:white;
+
+}
+
+/*======================
+HERO
+=======================*/
+
+.hero{
+
+    width:100%;
+
+    height:100vh;
+
+    background:url("img/banner.jpg") center center;
+
+    background-size:cover;
+
+    position:relative;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(0,0,0,.55);
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    color:white;
+
+    max-width:900px;
+
+    padding:20px;
+
+}
+
+.hero-content h1{
+
+    font-size:65px;
+
+    margin-bottom:20px;
+
+    letter-spacing:2px;
+
+}
+
+.hero-content p{
+
+    font-size:22px;
+
+    margin-bottom:40px;
+
+}
+
+/*======================
+BOTÕES
+=======================*/
+
+.btn{
+
+    display:inline-block;
+
+    background:var(--verde);
+
+    color:white;
+
+    padding:16px 38px;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+.btn:hover{
+
+    background:var(--verde-escuro);
+
+    transform:translateY(-4px);
+
+}
+
+/*======================
+CONTAINER
+=======================*/
+
+.container{
+
+    width:85%;
+
+    margin:auto;
+
+    padding:80px 0;
+
+}
+
+.container h2{
+
+    text-align:center;
+
+    font-size:38px;
+
+    color:var(--verde);
+
+    margin-bottom:30px;
+
+}
+
+.container p{
+
+    line-height:1.8;
+
+    font-size:17px;
+
+}
+
+/*======================
+BANNER DAS PÁGINAS
+=======================*/
+
+.banner-pagina{
+
+    width:100%;
+
+    height:320px;
+
+    background:linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("img/banner2.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    flex-direction:column;
+
+    color:white;
+
+    text-align:center;
+
+    margin-top:80px;
+
+}
+
+.banner-pagina h1{
+
+    font-size:55px;
+
+    margin-bottom:15px;
+
+}
+
+.banner-pagina p{
+
+    font-size:22px;
+
+    max-width:700px;
+
+}
+/*========================================
+        PARTE 2
+        CARDS • SOBRE • ESTATÍSTICAS
+=========================================*/
+
+/*======================
+SEÇÃO SOBRE
+=======================*/
+
+.sobre{
+
+    width:85%;
+    margin:80px auto;
+    text-align:center;
+
+}
+
+.sobre h2{
+
+    color:var(--verde);
+    font-size:40px;
+    margin-bottom:25px;
+
+}
+
+.sobre p{
+
+    max-width:900px;
+    margin:auto;
+    font-size:18px;
+    line-height:1.9;
+    color:#555;
+
+}
+
+/*======================
+CARDS
+=======================*/
+
+.cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.card{
+
+    background:white;
+
+    border-radius:var(--radius);
+
+    padding:35px;
+
+    box-shadow:var(--sombra);
+
+    transition:.35s;
+
+    text-align:center;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+.card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:6px;
+
+    background:var(--verde);
+
+}
+
+.card:hover{
+
+    transform:translateY(-12px);
+
+    box-shadow:0 20px 40px rgba(0,0,0,.18);
+
+}
+
+.card i{
+
+    font-size:60px;
+
+    color:var(--verde);
+
+    margin-bottom:20px;
+
+}
+
+.card h3{
+
+    color:var(--verde);
+
+    font-size:24px;
+
+    margin-bottom:15px;
+
+}
+
+.card h1{
+
+    color:var(--verde);
+
+    font-size:48px;
+
+    margin-bottom:10px;
+
+}
+
+.card p{
+
+    color:#666;
+
+    line-height:1.7;
+
+}
+
+/*======================
+ESTATÍSTICAS
+=======================*/
+
+.estatisticas{
+
+    background:linear-gradient(135deg,var(--verde),var(--verde-escuro));
+
+    padding:90px 8%;
+
+    color:white;
+
+    text-align:center;
+
+}
+
+.estatisticas h2{
+
+    font-size:42px;
+
+    margin-bottom:60px;
+
+}
+
+.stats{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:35px;
+
+}
+
+.stats div{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+    padding:35px;
+
+    border-radius:15px;
+
+    transition:.3s;
+
+}
+
+.stats div:hover{
+
+    transform:scale(1.05);
+
+}
+
+.stats h1{
+
+    font-size:55px;
+
+    margin-bottom:10px;
+
+}
+
+.stats p{
+
+    font-size:18px;
+
+}
+
+/*======================
+OBJETIVOS
+=======================*/
+
+.objetivos{
+
+    padding:80px 0;
+
+}
+
+.objetivos h2{
+
+    text-align:center;
+
+    color:var(--verde);
+
+    margin-bottom:50px;
+
+}
+
+/*======================
+LISTAS
+=======================*/
+
+.container ul{
+
+    margin-top:30px;
+
+}
+
+.container ul li{
+
+    background:white;
+
+    padding:18px 25px;
+
+    margin-bottom:15px;
+
+    border-left:6px solid var(--verde);
+
+    border-radius:8px;
+
+    box-shadow:0 5px 15px rgba(0,0,0,.08);
+
+    transition:.3s;
+
+}
+
+.container ul li:hover{
+
+    transform:translateX(10px);
+
+}
+
+/*======================
+EQUIPE
+=======================*/
+
+.equipe{
+
+    padding:80px 0;
+
+}
+
+.equipe .card img{
+
+    width:120px;
+
+    height:120px;
+
+    border-radius:50%;
+
+    object-fit:cover;
+
+    margin-bottom:20px;
+
+    border:5px solid var(--verde);
+
+}
+
+.equipe .card h3{
+
+    margin-bottom:8px;
+
+}
+
+.equipe .card span{
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+/*======================
+PARCEIROS
+=======================*/
+
+.parceiros{
+
+    padding:80px 0;
+
+}
+
+.parceiros .cards{
+
+    align-items:stretch;
+
+}
+
+.parceiros .card{
+
+    padding:40px 25px;
+
+}
+
+/*======================
+ANIMAÇÃO DOS CARDS
+=======================*/
+
+.card{
+
+    animation:aparecer .8s ease;
+
+}
+
+@keyframes aparecer{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================
+DIVISÃO DE SEÇÕES
+=======================*/
+
+section{
+
+    position:relative;
+
+}
+
+section:not(.hero):not(.banner-pagina){
+
+    padding-top:30px;
+
+    padding-bottom:30px;
+
+}
+
+/*======================
+TÍTULOS
+=======================*/
+
+h1,h2,h3{
+
+    font-weight:700;
+
+}
+
+strong{
+
+    color:var(--verde);
+
+}
+/*========================================
+        PARTE 3
+        GALERIA • FOTOS • VÍDEOS
+=========================================*/
+
+/*======================
+GALERIA
+=======================*/
+
+.galeria{
+
+    width:85%;
+
+    margin:80px auto;
+
+    text-align:center;
+
+}
+
+.galeria h2{
+
+    font-size:40px;
+
+    color:var(--verde);
+
+    margin-bottom:20px;
+
+}
+
+.galeria p{
+
+    color:#666;
+
+    margin-bottom:40px;
+
+    font-size:17px;
+
+}
+
+/*======================
+GRID
+=======================*/
+
+.galeria-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+/*======================
+FOTOS
+=======================*/
+
+.foto{
+
+    background:white;
+
+    border-radius:15px;
+
+    overflow:hidden;
+
+    box-shadow:var(--sombra);
+
+    transition:.4s;
+
+}
+
+.foto:hover{
+
+    transform:translateY(-10px);
+
+}
+
+.foto img{
+
+    width:100%;
+
+    height:250px;
+
+    object-fit:cover;
+
+    transition:.6s;
+
+}
+
+.foto:hover img{
+
+    transform:scale(1.10);
+
+}
+
+.foto p{
+
+    padding:18px;
+
+    font-size:16px;
+
+    font-weight:600;
+
+    color:var(--texto);
+
+}
+
+/*======================
+OVERLAY DA FOTO
+=======================*/
+
+.foto{
+
+    position:relative;
+
+}
+
+.foto::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:rgba(46,125,50,.25);
+
+    opacity:0;
+
+    transition:.4s;
+
+    z-index:2;
+
+}
+
+.foto:hover::before{
+
+    opacity:1;
+
+}
+
+.foto img{
+
+    position:relative;
+
+    z-index:1;
+
+}
+
+/*======================
+VÍDEOS
+=======================*/
+
+.video-area{
+
+    margin-top:40px;
+
+}
+
+.video-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:25px;
+
+    box-shadow:var(--sombra);
+
+}
+
+.video-card h3{
+
+    color:var(--verde);
+
+    margin-bottom:20px;
+
+}
+
+.video-card iframe{
+
+    border:none;
+
+    border-radius:12px;
+
+}
+
+/*======================
+EVENTOS
+=======================*/
+
+.news-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+}
+
+.news{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    box-shadow:var(--sombra);
+
+    transition:.3s;
+
+}
+
+.news:hover{
+
+    transform:translateY(-8px);
+
+}
+
+.news h3{
+
+    color:var(--verde);
+
+    margin-bottom:15px;
+
+}
+
+.news p{
+
+    color:#666;
+
+}
+
+/*======================
+IMAGEM RESPONSIVA
+=======================*/
+
+img{
+
+    max-width:100%;
+
+    display:block;
+
+}
+
+/*======================
+BOTÃO VER MAIS
+=======================*/
+
+.btn-ver{
+
+    display:inline-block;
+
+    margin-top:20px;
+
+    padding:12px 30px;
+
+    background:var(--verde);
+
+    color:white;
+
+    border-radius:50px;
+
+    transition:.3s;
+
+}
+
+.btn-ver:hover{
+
+    background:var(--verde-escuro);
+
+}
+
+/*======================
+PREPARAÇÃO PARA LIGHTBOX
+=======================*/
+
+.lightbox{
+
+    display:none;
+
+}
+
+.lightbox.ativo{
+
+    display:flex;
+
+}
+
+/*======================
+ANIMAÇÃO DAS FOTOS
+=======================*/
+
+.foto{
+
+    animation:fadeFoto .8s ease;
+
+}
+
+@keyframes fadeFoto{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+/*========================================
+        PARTE 4
+        ARTIGOS • PESQUISA • DOWNLOADS
+=========================================*/
+
+/*======================
+ARTIGOS
+=======================*/
+
+.artigos{
+
+    width:85%;
+
+    margin:80px auto;
+
+    text-align:center;
+
+}
+
+.artigos h2{
+
+    font-size:40px;
+
+    color:var(--verde);
+
+    margin-bottom:20px;
+
+}
+
+/*======================
+GRID DE ARTIGOS
+=======================*/
+
+.artigos-grid{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+/*======================
+CARD DE ARTIGO
+=======================*/
+
+.artigo-card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    box-shadow:var(--sombra);
+
+    transition:.3s;
+
+    text-align:left;
+
+    position:relative;
+
+    overflow:hidden;
+
+}
+
+.artigo-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    height:6px;
+
+    background:var(--verde);
+
+}
+
+.artigo-card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/*======================
+TÍTULO DO ARTIGO
+=======================*/
+
+.artigo-card h3{
+
+    color:var(--verde);
+
+    margin-bottom:12px;
+
+    font-size:22px;
+
+}
+
+/*======================
+TEXTO
+=======================*/
+
+.artigo-card p{
+
+    color:#666;
+
+    line-height:1.6;
+
+    margin-bottom:10px;
+
+}
+
+/*======================
+DOWNLOAD
+=======================*/
+
+.btn-download{
+
+    display:inline-block;
+
+    margin-top:15px;
+
+    padding:10px 18px;
+
+    background:var(--azul);
+
+    color:white;
+
+    border-radius:8px;
+
+    font-size:14px;
+
+    transition:.3s;
+
+}
+
+.btn-download:hover{
+
+    background:#0d47a1;
+
+}
+
+/*======================
+BARRA DE PESQUISA
+=======================*/
+
+.pesquisa{
+
+    width:100%;
+
+    max-width:500px;
+
+    padding:14px 18px;
+
+    border:2px solid var(--verde);
+
+    border-radius:50px;
+
+    outline:none;
+
+    font-size:16px;
+
+    margin-top:20px;
+
+    transition:.3s;
+
+}
+
+.pesquisa:focus{
+
+    border-color:var(--azul);
+
+    box-shadow:0 0 10px rgba(21,101,192,.2);
+
+}
+
+/*======================
+INFORMAÇÕES DO ARTIGO
+=======================*/
+
+.artigo-card strong{
+
+    color:var(--verde-escuro);
+
+}
+
+/*======================
+REVISTAS / PARCEIROS
+=======================*/
+
+.revista{
+
+    background:var(--cinza);
+
+    padding:80px 0;
+
+}
+
+.revista .card{
+
+    text-align:center;
+
+}
+
+/*======================
+ESTATÍSTICAS ARTIGOS
+=======================*/
+
+.estat-artigos{
+
+    background:linear-gradient(135deg,var(--azul),#1e88e5);
+
+    color:white;
+
+    padding:80px 8%;
+
+    text-align:center;
+
+}
+
+.estat-artigos .cards{
+
+    margin-top:40px;
+
+}
+
+.estat-artigos .card{
+
+    background:rgba(255,255,255,.12);
+
+    backdrop-filter:blur(10px);
+
+}
+
+/*======================
+HOVER MELHORADO
+=======================*/
+
+.artigo-card:hover h3{
+
+    letter-spacing:.5px;
+
+}
+
+/*======================
+RESPONSIVO ARTIGOS
+=======================*/
+
+@media(max-width:768px){
+
+    .artigos h2{
+
+        font-size:32px;
+
+    }
+
+    .artigo-card{
+
+        text-align:center;
+
+    }
+
+}
+/*========================================
+        PARTE 5
+        COMPOSTAGEM • TABELAS • DASHBOARD
+=========================================*/
+
+/*======================
+CARDS DE MONITORAMENTO
+=======================*/
+
+.compostagem{
+
+    width:85%;
+
+    margin:80px auto;
+
+    text-align:center;
+
+}
+
+.compostagem h2{
+
+    font-size:40px;
+
+    color:var(--verde);
+
+    margin-bottom:25px;
+
+}
+
+/*======================
+CARDS SENSORIAIS
+=======================*/
+
+.compostagem .cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.compostagem .card{
+
+    background:white;
+
+    border-radius:15px;
+
+    padding:30px;
+
+    box-shadow:var(--sombra);
+
+    transition:.3s;
+
+    position:relative;
+
+}
+
+.compostagem .card:hover{
+
+    transform:translateY(-10px);
+
+}
+
+/* ÍCONES DOS SENSORES */
+
+.compostagem .card h3{
+
+    font-size:20px;
+
+    color:var(--verde);
+
+    margin-bottom:10px;
+
+}
+
+/* VALORES GRANDES */
+
+.compostagem .card h1{
+
+    font-size:42px;
+
+    color:var(--texto);
+
+    margin-bottom:8px;
+
+}
+
+/*======================
+TABELA
+=======================*/
+
+.tabela{
+
+    width:100%;
+
+    border-collapse:collapse;
+
+    margin-top:40px;
+
+    background:white;
+
+    box-shadow:var(--sombra);
+
+    border-radius:12px;
+
+    overflow:hidden;
+
+}
+
+.tabela thead{
+
+    background:var(--verde);
+
+    color:white;
+
+}
+
+.tabela th,
+.tabela td{
+
+    padding:15px;
+
+    text-align:center;
+
+    border-bottom:1px solid #eee;
+
+    font-size:15px;
+
+}
+
+.tabela tbody tr:hover{
+
+    background:#f1f8f1;
+
+}
+
+/*======================
+SEÇÃO DE GRÁFICOS
+=======================*/
+
+canvas{
+
+    width:100% !important;
+
+    max-height:300px;
+
+}
+
+/*======================
+DASHBOARD STYLE
+=======================*/
+
+.dashboard{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+    gap:30px;
+
+    margin-top:40px;
+
+}
+
+.dashboard .card{
+
+    background:linear-gradient(135deg,var(--verde),var(--verde-escuro));
+
+    color:white;
+
+}
+
+/*======================
+INDICADORES EM TEMPO REAL
+=======================*/
+
+.indicador{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:10px 0;
+
+    border-bottom:1px solid rgba(255,255,255,.2);
+
+}
+
+.indicador:last-child{
+
+    border:none;
+
+}
+
+/*======================
+STATUS COLORS
+=======================*/
+
+.status-ok{
+
+    color:#00e676;
+
+    font-weight:600;
+
+}
+
+.status-alerta{
+
+    color:#ff5252;
+
+    font-weight:600;
+
+}
+
+/*======================
+SEÇÃO IoT
+=======================*/
+
+.iot-info{
+
+    background:var(--cinza);
+
+    padding:60px;
+
+    border-radius:15px;
+
+    margin-top:60px;
+
+    text-align:left;
+
+}
+
+.iot-info h2{
+
+    color:var(--verde);
+
+    margin-bottom:15px;
+
+}
+
+/*======================
+EFEITO DE PAINEL
+=======================*/
+
+.painel-efeito{
+
+    border-left:6px solid var(--verde);
+
+    padding-left:20px;
+
+}
+
+/*======================
+RESPONSIVO
+=======================*/
+
+@media(max-width:768px){
+
+    .compostagem h2{
+
+        font-size:30px;
+
+    }
+
+    .tabela th,
+    .tabela td{
+
+        font-size:13px;
+
+        padding:10px;
+
+    }
+
+}
+/*========================================
+        PARTE 6
+        LOGIN • FORMULÁRIOS • INPUTS
+=========================================*/
+
+/*======================
+PÁGINA DE LOGIN
+=======================*/
+
+.login-page{
+
+    width:100%;
+
+    height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:linear-gradient(135deg,var(--verde),var(--verde-escuro));
+
+    padding-top:80px;
+
+}
+
+.login-box{
+
+    background:white;
+
+    width:420px;
+
+    padding:40px;
+
+    border-radius:15px;
+
+    box-shadow:0 20px 50px rgba(0,0,0,.25);
+
+    text-align:center;
+
+    animation:fadeLogin .6s ease;
+
+}
+
+.login-box h1{
+
+    color:var(--verde);
+
+    margin-bottom:10px;
+
+    font-size:32px;
+
+}
+
+.login-box p{
+
+    color:#666;
+
+    margin-bottom:25px;
+
+    font-size:14px;
+
+}
+
+/*======================
+FORMULÁRIOS GERAIS
+=======================*/
+
+form{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+input,
+textarea{
+
+    width:100%;
+
+    padding:14px 16px;
+
+    border:2px solid #ddd;
+
+    border-radius:10px;
+
+    font-size:15px;
+
+    outline:none;
+
+    transition:.3s;
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+textarea{
+
+    resize:none;
+
+    min-height:120px;
+
+}
+
+/* FOCO DOS INPUTS */
+
+input:focus,
+textarea:focus{
+
+    border-color:var(--verde);
+
+    box-shadow:0 0 10px rgba(46,125,50,.2);
+
+}
+
+/*======================
+BOTÕES FORMULÁRIO
+=======================*/
+
+button{
+
+    padding:14px;
+
+    background:var(--verde);
+
+    color:white;
+
+    border:none;
+
+    border-radius:10px;
+
+    font-size:16px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+button:hover{
+
+    background:var(--verde-escuro);
+
+    transform:translateY(-3px);
+
+}
+
+/*======================
+LEMBRAR DE MIM
+=======================*/
+
+.lembrar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:13px;
+
+    color:#666;
+
+}
+
+.lembrar input{
+
+    width:auto;
+
+}
+
+/*======================
+LINKS FORMULÁRIO
+=======================*/
+
+.lembrar a{
+
+    color:var(--verde);
+
+    font-size:13px;
+
+    transition:.3s;
+
+}
+
+.lembrar a:hover{
+
+    color:var(--verde-escuro);
+
+}
+
+/*======================
+INPUT FILE
+=======================*/
+
+input[type="file"]{
+
+    padding:10px;
+
+    background:#f5f5f5;
+
+}
+
+/*======================
+FOCO ESPECIAL ADMIN
+=======================*/
+
+.admin-form{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:var(--sombra);
+
+}
+
+/*======================
+LABELS
+=======================*/
+
+label{
+
+    font-size:14px;
+
+    font-weight:500;
+
+    color:#444;
+
+}
+
+/*======================
+ANIMAÇÃO LOGIN
+=======================*/
+
+@keyframes fadeLogin{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================
+MENSAGEM DE ERRO (PREPARADO BACKEND)
+=======================*/
+
+.erro{
+
+    color:#ff5252;
+
+    font-size:13px;
+
+    margin-top:-8px;
+
+}
+
+/*======================
+SUCESSO
+=======================*/
+
+.sucesso{
+
+    color:#00c853;
+
+    font-size:13px;
+
+    margin-top:-8px;
+
+}
+
+/*======================
+RESPONSIVO LOGIN
+=======================*/
+
+@media(max-width:500px){
+
+    .login-box{
+
+        width:90%;
+
+        padding:25px;
+
+    }
+
+}
+/*========================================
+        PARTE 7
+        ADMIN • FOOTER • RESPONSIVIDADE FINAL
+=========================================*/
+
+/*======================
+PAINEL ADMINISTRATIVO
+=======================*/
+
+.admin{
+
+    width:85%;
+
+    margin:80px auto;
+
+}
+
+.admin h2{
+
+    text-align:center;
+
+    font-size:38px;
+
+    color:var(--verde);
+
+    margin-bottom:30px;
+
+}
+
+/*======================
+RESUMO ADMIN
+=======================*/
+
+.admin .cards{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+
+    gap:25px;
+
+}
+
+.admin .card{
+
+    background:linear-gradient(135deg,var(--verde),var(--verde-escuro));
+
+    color:white;
+
+    text-align:center;
+
+}
+
+/* números grandes no admin */
+
+.admin .card h1{
+
+    font-size:46px;
+
+}
+
+/*======================
+FORMULÁRIOS ADMIN
+=======================*/
+
+.admin form{
+
+    background:white;
+
+    padding:30px;
+
+    border-radius:15px;
+
+    box-shadow:var(--sombra);
+
+    margin-top:30px;
+
+}
+
+/*======================
+BOTÕES ADMIN SECUNDÁRIOS
+=======================*/
+
+button.secundario{
+
+    background:#607d8b;
+
+}
+
+button.secundario:hover{
+
+    background:#455a64;
+
+}
+
+/*======================
+TABELAS ADMIN
+=======================*/
+
+.tabela button{
+
+    padding:6px 10px;
+
+    font-size:13px;
+
+    margin:2px;
+
+    border-radius:6px;
+
+}
+
+.tabela button:first-child{
+
+    background:var(--azul);
+
+}
+
+.tabela button:last-child{
+
+    background:#e53935;
+
+}
+
+/*======================
+FOOTER
+=======================*/
+
+footer{
+
+    background:#111;
+
+    color:#eee;
+
+    text-align:center;
+
+    padding:60px 20px;
+
+    margin-top:80px;
+
+}
+
+footer h3{
+
+    color:var(--verde);
+
+    margin-bottom:10px;
+
+    font-size:26px;
+
+}
+
+footer p{
+
+    font-size:14px;
+
+    color:#bbb;
+
+    margin:5px 0;
+
+}
+
+/*======================
+RESPONSIVIDADE GLOBAL
+=======================*/
+
+@media(max-width:900px){
+
+    header{
+
+        padding:0 5%;
+
+    }
+
+    .hero-content h1{
+
+        font-size:45px;
+
+    }
+
+    .hero-content p{
+
+        font-size:18px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    nav ul{
+
+        gap:15px;
+
+        font-size:14px;
+
+    }
+
+    .hero-content h1{
+
+        font-size:32px;
+
+    }
+
+    .container{
+
+        width:92%;
+
+    }
+
+    .cards{
+
+        grid-template-columns:1fr;
+
+    }
+
+}
+
+/*======================
+AJUSTE FINAL GERAL
+=======================*/
+
+section{
+
+    animation:fadeIn 0.8s ease;
+
+}
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(20px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/*======================
+PEQUENOS AJUSTES DE UX
+=======================*/
+
+button, .btn, .btn-download{
+
+    cursor:pointer;
+
+}
+
+/* hover suave global */
+
+a, button{
+
+    transition:.25s ease;
+
+}
